@@ -1,0 +1,14 @@
+{
+  "ca.header.title": "DataLynn Interview Copilot",
+  "ca.header.freetitle": "DataLynn Interview Copilot - Free Trial",
+  "ca.header.exit": "Exit Interview",
+  "ca.messageInput.start": "Start Recording",
+  "ca.messageInput.startText": "Ensure the interviewer is ready in the meeting room since his voice is required to initiate copilot session.",
+  "ca.messageInput.generate": "Generate Answer",
+  "ca.meaageInput.generateText": "Recording",
+  "ca.messageInput.endText": "This Interview has ended",
+  "ca.messageInput.loading": "Loading",
+  "ca.codeDisplay.copyCode": "Copy Code",
+  "ca.codeDisplay.copiedCode": "Code Copied",
+  "ca.codeDisplay.copyToolTip": "Copy"
+}
