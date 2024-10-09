@@ -21,6 +21,7 @@
     "@mui/lab": "^5.0.0-alpha.172",
     "@mui/material": "^5.16.0",
     "@mui/styled-engine-sc": "6.0.0-alpha.18",
+    "@mui/system": "^6.1.2",
     "@reduxjs/toolkit": "^2.2.3",
     "@types/react-helmet": "^6.1.11",
     "@types/redux-logger": "^3.0.13",

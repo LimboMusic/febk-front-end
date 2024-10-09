@@ -1,37 +1,51 @@
-// import React from 'react'
-import img from '@/assets/images/banner.avif'
+import { useEffect, useState } from 'react'
+import Hero from './components/Hero/Hero'
 import styles from './LandingPage.module.less'
-import { Typography } from '@mui/material'
-import { useIntl } from 'react-intl'
-// import ExpandableMenu from '@/components/ExpandableMenu/ExpandableMenu'
-// import { useState } from 'react';
+// import React, { useState, useEffect } from 'react';
+import { Box } from '@mui/material'
 
 function LandingPage() {
-  const intl = useIntl()
+  const [isLoading, setIsLoading] = useState(true)
+  const [animate, setAnimate] = useState(true)
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    // 模拟加载完成，延迟 2 秒后隐藏遮罩
+    const timer = setTimeout(() => {
+      setAnimate(false) // 开始触发动画
+      setTimeout(() => {
+        setIsLoading(false) // 动画完成后隐藏遮罩
+      }, 800) // 动画持续时间和 CSS 过渡时间一致
+    }, 800)
+
+    return () => {
+      clearTimeout(timer)
+      document.body.style.overflow = ''
+    }
+  }, [])
   return (
-    <div className={`${styles.wrapper} relative`}>
-      {/* <ExpandableMenu /> */}
-      <img
-        src={img}
-        className={`w-full h-full absolute top-0 left-0 object-cover`}
-      />
-      <div className={`flex flex-col px-12`}>
-        <div className={`h-[200px]`}></div>
-        <div className={`z-10`}>
-          <Typography variant="h1" className={`text-white`}>
-            {intl.formatMessage({ id: 'lp.title1' })}
-          </Typography>
-          <Typography variant="h1" className={`text-white`}>
-            {intl.formatMessage({ id: 'lp.title2' })}
-          </Typography>
-        </div>
-        <div className={`h-[200px] flex flex-col-reverse z-10`}>
-          <Typography variant="h6" className={`text-white w-[445px]`}>
-          {intl.formatMessage({ id: 'lp.title3' })}
-          </Typography>
-        </div>
+    <>
+      <div className={`${styles.wrapper}`}>
+        <Hero />
       </div>
-    </div>
+      {isLoading && (
+        <Box
+          sx={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(38,67,87)', // 蓝色遮罩
+            zIndex: 9999,
+            transform: animate ? 'translateY(0)' : 'translateY(-100%)',
+            transition: 'transform 1s ease-in-out', // 缓缓伸缩动画
+          }}
+        />
+      )}
+    </>
   )
 }
 
