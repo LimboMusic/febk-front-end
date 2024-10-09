@@ -7,14 +7,7 @@ interface LocaleState {
 
 const getInitialLocale = (): 'en' | 'zh' => {
     const savedLocale = localStorage.getItem('locale') as 'en' | 'zh' | null
-    const currentOrigin = window.location.origin
-    if (currentOrigin.includes('datalynn.ai')) {
-        return 'zh'
-    } else if (currentOrigin.includes('datalynn.com')) {
-        return 'en'
-    } else {
-        return savedLocale === 'zh' ? 'zh' : 'en'
-    }
+    return savedLocale === 'en' ? 'en' : 'zh'
 }
 
 const initialState: LocaleState = {

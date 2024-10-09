@@ -5,8 +5,10 @@ import { ThemeProvider } from '@mui/material'
 import theme from '@/lib/theme'
 import { useSelector, selectLocale } from './store'
 import HomePage from './pages/HomePage/HomePage'
-import enUserPage from './locales/en/enUserPage.json'
-import zhUserPage from './locales/zh/zhUserPage.json'
+import enLandingPage from './locales/en/enLandingPage.json'
+import zhLandingPage from './locales/zh/zhLandingPage.json'
+// import enUserPage from './locales/en/enUserPage.json'
+// import zhUserPage from './locales/zh/zhUserPage.json'
 import { IntlProvider } from 'react-intl'
 import ProductsPage from './pages/ProductsPage/ProductsPage'
 import LandingPage from './pages/LandingPage/LandingPage'
@@ -14,10 +16,10 @@ import ExpandableMenu from './components/ExpandableMenu/ExpandableMenu'
 
 const messages = {
   en: {
-    ...enUserPage,
+    ...enLandingPage
   },
   zh: {
-    ...zhUserPage,
+    ...zhLandingPage
   },
 }
 
