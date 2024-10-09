@@ -9,7 +9,7 @@ function LandingPage() {
   return (
     <div className={`${styles.wrapper} relative`}>
       {/* <ExpandableMenu /> */}
-      <img src={img} className={`w-full h-screen absolute top-0 left-0`} />
+      <img src={img} className={`w-full h-full absolute top-0 left-0 object-cover`} />
       <div className={`flex flex-col px-12`}>
         <div className={`h-[200px]`}></div>
         <div className={`z-10`}>
