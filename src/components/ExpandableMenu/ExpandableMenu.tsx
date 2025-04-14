@@ -77,6 +77,13 @@ function ExpandableMenu() {
         navigate('/products/deep-groove-ball-bearings')
       },
     },
+    {
+      label: '圆锥滚子轴承',
+      handleClick: () => {
+        dispatch(setOpen(false))
+        navigate('/products/taper-roller-bearings')
+      },
+    },
   ]
 
   useEffect(() => {
@@ -101,9 +108,8 @@ function ExpandableMenu() {
               height: '100vh',
               width: '36rem', // 控制弹窗的宽度
               bgcolor: 'background.paper',
-              boxShadow: 24,
+              // boxShadow: 24,
               p: 8,
-              borderRight: '2px solid #000',
             }}
           >
             {state === 'menuList' && (
@@ -185,6 +191,7 @@ function ExpandableMenu() {
                             <div
                               className={`${styles.navlink}`}
                               key={item.label}
+                              style={{height:'60px'}}
                             >
                               <Typography
                                 variant="h6"

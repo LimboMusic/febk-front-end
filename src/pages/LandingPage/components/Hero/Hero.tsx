@@ -1,17 +1,17 @@
 // import React from 'react'
-import img from '@/assets/images/banner.avif'
+// import img from '@/assets/images/banner.avif'
 import styles from './Hero.module.less'
 import { Typography } from '@mui/material'
 import { useIntl } from 'react-intl'
+import HomePage from '@/assets/images/img-home-banner.jpg'
 
 function Hero() {
-    const intl = useIntl()
+  const intl = useIntl()
   return (
     <div className={`${styles.wrapper} relative`}>
-      {/* <ExpandableMenu /> */}
       <img
-        src={img}
-        className={`w-full h-full absolute top-0 left-0 object-cover`}
+        src={HomePage}
+        className={`w-full h-screen min-h-screen absolute top-0 left-0 object-cover`}
       />
       <div className={`flex flex-col px-12`}>
         <div className={`h-[200px]`}></div>

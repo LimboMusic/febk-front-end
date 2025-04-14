@@ -1,8 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from 'react'
 import Hero from './components/Hero/Hero'
+import Transaction from './components/Transaction/Transaction'
 import styles from './LandingPage.module.less'
 // import React, { useState, useEffect } from 'react';
 import { Box } from '@mui/material'
+import Footer from '@/components/Footer/Footer'
 
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true)
@@ -15,6 +18,7 @@ function LandingPage() {
       setAnimate(false) // 开始触发动画
       setTimeout(() => {
         setIsLoading(false) // 动画完成后隐藏遮罩
+        document.body.style.overflow = ''
       }, 800) // 动画持续时间和 CSS 过渡时间一致
     }, 800)
 
@@ -27,6 +31,8 @@ function LandingPage() {
     <>
       <div className={`${styles.wrapper}`}>
         <Hero />
+        <Transaction />
+        <Footer />
       </div>
       {isLoading && (
         <Box

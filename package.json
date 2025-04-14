@@ -22,6 +22,8 @@
     "@mui/material": "^5.16.0",
     "@mui/styled-engine-sc": "6.0.0-alpha.18",
     "@mui/system": "^6.1.2",
+    "@mui/x-data-grid": "^7.23.3",
+    "@mui/x-data-grid-pro": "^7.23.3",
     "@reduxjs/toolkit": "^2.2.3",
     "@types/react-helmet": "^6.1.11",
     "@types/redux-logger": "^3.0.13",

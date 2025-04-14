@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Header from '@/components/Header/Header'
-import Footer from '@/components/Footer/Footer'
 import styles from './HomePage.module.less'
 import Cookie from '@/components/Cookie/Cookie'
 // import LandingPage from '../LandingPage/LandingPage'
@@ -43,7 +42,7 @@ function HomePage() {
       {showCookie && locale === 'en' && (
         <Cookie setShowCookie={setShowCookie} />
       )}
-      <Footer />
+      
     </div>
   )
 }

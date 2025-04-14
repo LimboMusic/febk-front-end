@@ -3,9 +3,12 @@ import MenuButton from '../MenuButton/MenuButton'
 import { Typography } from '@mui/material'
 import { useSelector, useDispatch } from 'react-redux'
 import { selectMenu, setOpen } from '@/store/slice'
+import { useIntl } from 'react-intl'
 
 function LeftMenu() {
+  const intl = useIntl()
   const dispatch = useDispatch()
+
   const { open } = useSelector(selectMenu)
   const handleClickProduct = () => {
     dispatch(setOpen(!open))
@@ -19,13 +22,13 @@ function LeftMenu() {
           className={`text-black cursor-pointer`}
           onClick={handleClickProduct}
         >
-          产品
+          {intl.formatMessage({ id: 'lp.header.product' })}
         </Typography>
         <Typography variant="h6" className={`text-black`}>
-          服务
+          {intl.formatMessage({ id: 'lp.header.service' })}
         </Typography>
         <Typography variant="h6" className={`text-black`}>
-          关于
+        {intl.formatMessage({ id: 'lp.header.about' })}
         </Typography>
       </div>
     </div>

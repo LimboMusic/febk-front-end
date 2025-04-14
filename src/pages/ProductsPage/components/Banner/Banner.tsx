@@ -1,8 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // import React from 'react'
 import { Breadcrumbs, Typography, Link } from '@mui/material'
 import productImg from '@/assets/images/img-product-deep-groove-ball-bearings.avif'
 import styles from './Banner.module.less'
-import backgroundImg from '@/assets/images/img-products-banner-background.png'
+
+// import backgroundImg from '@/assets/images/img-products-banner-background.png'
+
+
 
 const detailData = [
   {
@@ -77,15 +81,12 @@ function Banner() {
           />
         </div>
       </header>
-      <section
-        className={`mt-[30px] h-full relative overflow-hidden max-w-[100vw] w-screen`}
-      >
-        <img
-          src={backgroundImg}
-          className={`absolute left-0 top-0 w-full h-[240px]`}
-        />
-        <Typography className={`z-10`}> 为什么选择FEB Explorer深沟球轴承？ </Typography>
-      </section>
+      {/* <section className={`mt-[30px] h-[240px] overflow-hidden bg-[#669999]`}>
+        
+        <Typography className={`z-10 h-[240px] text-white flex`}>
+          为什么选择FEB Explorer深沟球轴承？
+        </Typography>
+      </section> */}
     </>
   )
 }
