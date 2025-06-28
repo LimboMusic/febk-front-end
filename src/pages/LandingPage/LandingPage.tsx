@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from 'react'
 import Hero from './components/Hero/Hero'
-import Transaction from './components/Transaction/Transaction'
+// import Transaction from './components/Transaction/Transaction'
 import styles from './LandingPage.module.less'
 // import React, { useState, useEffect } from 'react';
 import { Box } from '@mui/material'
@@ -31,7 +31,7 @@ function LandingPage() {
     <>
       <div className={`${styles.wrapper}`}>
         <Hero />
-        <Transaction />
+        {/* <Transaction /> */}
         <Footer />
       </div>
       {isLoading && (
@@ -44,12 +44,21 @@ function LandingPage() {
             bottom: 0,
             width: '100vw',
             height: '100vh',
-            backgroundColor: 'rgba(38,67,87)', // 蓝色遮罩
+            background: `linear-gradient(145deg, #3e1f0d 0%, #b34700 40%, #ec6519 70%, #4a2a14 100%)`,
             zIndex: 9999,
             transform: animate ? 'translateY(0)' : 'translateY(-100%)',
-            transition: 'transform 1s ease-in-out', // 缓缓伸缩动画
+            transition: 'transform 1.2s ease-in-out',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            letterSpacing: '2px',
+            fontFamily: 'Orbitron, monospace',
+            boxShadow: 'inset 0 0 120px rgba(0, 0, 0, 0.5)',
           }}
-        />
+        ></Box>
       )}
     </>
   )

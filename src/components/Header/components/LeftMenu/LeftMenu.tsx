@@ -24,12 +24,12 @@ function LeftMenu() {
         >
           {intl.formatMessage({ id: 'lp.header.product' })}
         </Typography>
-        <Typography variant="h6" className={`text-black`}>
+        {/* <Typography variant="h6" className={`text-black`}>
           {intl.formatMessage({ id: 'lp.header.service' })}
         </Typography>
         <Typography variant="h6" className={`text-black`}>
         {intl.formatMessage({ id: 'lp.header.about' })}
-        </Typography>
+        </Typography> */}
       </div>
     </div>
   )

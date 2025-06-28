@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.32 154.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ec6519;
+        font-family: SourceHanSansCN-Bold, 'Source Han Sans CN';
+        font-size: 79.49px;
+        font-weight: 700;
+        letter-spacing: -.08em;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 1.2px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(.6 70.55) scale(1.34 1)"><tspan x="0" y="0">FEBK</tspan></text>
+</svg>

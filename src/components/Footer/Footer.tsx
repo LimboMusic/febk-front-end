@@ -3,35 +3,34 @@ import { Link } from '@mui/material'
 import styles from './Footer.module.less'
 import { useIntl } from 'react-intl'
 
-const menuData = [
-  {
-    title: 'FEBK简介',
-    url: '#',
-  },
-  {
-    title: '产品',
-    url: '#',
-  },
-]
-
 function Footer() {
   const intl = useIntl()
+  const menuData = [
+    {
+      title: intl.formatMessage({ id: 'lp.footer.description.title' }),
+      url: '#',
+    },
+    {
+      title: intl.formatMessage({ id: 'lp.header.product' }),
+      url: '#',
+    },
+  ]
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.description}>
-          <div className={styles.title}>FEBK 简介</div>
+          <div className={styles.title}>
+            {intl.formatMessage({ id: 'lp.footer.description.title' })}
+          </div>
           <div className={styles.text}>
-            <span>
-            {intl.formatMessage({ id: 'lp.footer.description1' })}
-            </span>
-            <span>
-            {intl.formatMessage({ id: 'lp.footer.description2' })}
-            </span>
+            <span>{intl.formatMessage({ id: 'lp.footer.description1' })}</span>
+            <span>{intl.formatMessage({ id: 'lp.footer.description2' })}</span>
           </div>
         </div>
         <div className={styles.company}>
-          <div className={styles.title}>公司</div>
+          <div className={styles.title}>
+            {intl.formatMessage({ id: 'lp.footer.company.title' })}
+          </div>
           <div className={styles.menu}>
             {menuData.map((item) => {
               return (

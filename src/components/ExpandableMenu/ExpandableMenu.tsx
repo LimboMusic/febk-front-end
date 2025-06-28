@@ -6,8 +6,10 @@ import { selectMenu, setOpen } from '@/store/slice'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
+import { useIntl } from 'react-intl'
 
 function ExpandableMenu() {
+  const intl = useIntl()
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const { open } = useSelector(selectMenu)
@@ -23,62 +25,68 @@ function ExpandableMenu() {
 
   const menuData = [
     {
-      label: '产品',
+      label: intl.formatMessage({ id: 'lp.header.product' }),
       handleClick: () => {
         setState('productList')
       },
     },
-    {
-      label: '服务',
-      handleClick: () => {
-        // setState('productList')
-      },
-    },
-    {
-      label: '行业',
-      handleClick: () => {
-        // setState('productList')
-      },
-    },
-    {
-      label: '新闻中心',
-      handleClick: () => {
-        // setState('productList')
-      },
-    },
-    {
-      label: '关于',
-      handleClick: () => {
-        // setState('productList')
-      },
-    },
+    // {
+    //   label: '服务',
+    //   handleClick: () => {
+    //     // setState('productList')
+    //   },
+    // },
+    // {
+    //   label: '行业',
+    //   handleClick: () => {
+    //     // setState('productList')
+    //   },
+    // },
+    // {
+    //   label: '新闻中心',
+    //   handleClick: () => {
+    //     // setState('productList')
+    //   },
+    // },
+    // {
+    //   label: '关于',
+    //   handleClick: () => {
+    //     // setState('productList')
+    //   },
+    // },
   ]
 
   const userMenuData = [
     {
-      label: '联系人',
+      label: '',
       handleClick: () => {
         // setState('productList')
       },
     },
-    {
-      label: '在线购买',
-      handleClick: () => {
-        // setState('productList')
-      },
-    },
+    // {
+    //   label: '联系人',
+    //   handleClick: () => {
+    //     // setState('productList')
+    //   },
+    // },
+    // {
+    //   label: '在线购买',
+    //   handleClick: () => {
+    //     // setState('productList')
+    //   },
+    // },
   ]
 
   const productMenu = [
     {
-      label: '深沟球轴承',
+      label: intl.formatMessage({ id: 'lp.menu.product1' }),
       handleClick: () => {
         dispatch(setOpen(false))
         navigate('/products/deep-groove-ball-bearings')
       },
     },
     {
-      label: '圆锥滚子轴承',
+      label: intl.formatMessage({ id: 'lp.menu.product2' }),
       handleClick: () => {
         dispatch(setOpen(false))
         navigate('/products/taper-roller-bearings')
@@ -170,7 +178,7 @@ function ExpandableMenu() {
                     className={`${styles.top} cursor-pointer hover:text-[#0749bc] flex gap-2 items-center`}
                   >
                     <ArrowBackIosNewIcon fontSize="small" />
-                    菜单
+                    {intl.formatMessage({ id: 'lp.menu.title' })}
                   </Typography>
                   <div>
                     <div className={`${styles.header} flex flex-col gap-6`}>
@@ -182,7 +190,7 @@ function ExpandableMenu() {
                           fontWeight: '400',
                         }}
                       >
-                        产品
+                        {intl.formatMessage({ id: 'lp.header.product' })}
                       </Typography>
                       <Divider />
                       <div>
@@ -191,7 +199,7 @@ function ExpandableMenu() {
                             <div
                               className={`${styles.navlink}`}
                               key={item.label}
-                              style={{height:'60px'}}
+                              style={{ height: '60px' }}
                             >
                               <Typography
                                 variant="h6"

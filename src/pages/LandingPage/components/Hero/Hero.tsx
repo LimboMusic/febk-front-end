@@ -23,8 +23,8 @@ function Hero() {
             {intl.formatMessage({ id: 'lp.title2' })}
           </Typography>
         </div>
-        <div className={`h-[200px] flex flex-col-reverse z-10`}>
-          <Typography variant="h6" className={`text-white w-[445px]`}>
+        <div className={`h-[200px] flex flex-col-reverse z-10 items-end mt-10`}>
+          <Typography variant="h6" className={`text-white w-[445px] text-left`}>
             {intl.formatMessage({ id: 'lp.title3' })}
           </Typography>
         </div>
