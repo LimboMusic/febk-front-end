@@ -48,6 +48,11 @@ function Footer() {
           </div>
         </div>
       </div>
+      <div className={styles.info}>
+        <span>{intl.formatMessage({ id: 'lp.footer.address' })}</span>
+        <span>{intl.formatMessage({ id: 'lp.footer.phone' })}</span>
+        <span>{intl.formatMessage({ id: 'lp.footer.email' })}</span>
+      </div>
     </div>
   )
 }

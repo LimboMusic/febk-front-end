@@ -6,6 +6,8 @@ import styles from './LandingPage.module.less'
 // import React, { useState, useEffect } from 'react';
 import { Box } from '@mui/material'
 import Footer from '@/components/Footer/Footer'
+import Product from './components/Product/Product'
+import Company from './components/Company/Company'
 
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true)
@@ -32,6 +34,9 @@ function LandingPage() {
       <div className={`${styles.wrapper}`}>
         <Hero />
         {/* <Transaction /> */}
+        
+        <Product />
+        <Company />
         <Footer />
       </div>
       {isLoading && (
